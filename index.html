@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<style>
+		.saveedititem {
+			display: none;
+			margin: 0 auto;
+		}
+	</style>
+	<title>Cookie</title>
+</head>
+
+<h3 class="container my-4 text-center text-success text-capitalize">CRUD of cookie</h3>
+
+<body onload='checkForObjectives()'>
+	<div class="container ">
+		<div class="container text-center">
+			<input type='text' id='objective' onKeyPress='enter(event, this)'>
+			<input type="hidden" id='saveitem' onKeyPress='enter(event, this)'>
+			<br>
+			<!-- <input type="text" id='itemeditvalue'  onKeyPress='enter(event, this)'> -->
+			<button class=" mt-4 bg-success text-white text-capitalize" onClick="addItem()" id="addbtn">Add Item</button>
+			<!-- <button class=" mt-4 bg-danger text-white text-capitalize" onClick="deleteAllCookies()" id="addbtn">Delete all</button> -->
+			
+			<button class=" justify-content-center mt-4 saveedititem bg-success text-white text-capitalize" onclick="edititem()" id="saveedititem">save edit item</button>
+		</div>
+		<div class="container mt-5">
+			<ul id='list'>
+			</ul>
+        </div>
+    </div>
+    <script src="cookie.js"></script>
+</body>
+</html>
